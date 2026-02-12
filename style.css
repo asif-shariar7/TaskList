@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.head {
+    margin-top: 120px;
+    font-weight: 900;
+    color: #e5e7eb;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.form {
+    background: rgba(15, 23, 42, 0.6);
+    position: absolute;
+    top: 30%;
+    width: 400px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #e5e7eb;
+    border-radius: 10px 0 0 0;
+}
+
+.input:focus {
+    background: #ffffff;
+}
+
+.list li {
+    padding: 15px 20px;
+    border-top: 1px rgba(255, 255, 255, 0.2);
+    color: #0f172a;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: #f1f5f9;
+    border-radius: 6px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.list li:hover {
+    background: #e2e8f0;
+    transform: scale(1.02);
+}
+
+.list .fa-trash {
+    position: absolute;
+    right: 20px;
+    color: #dc2626;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.list .fa-trash:hover {
+    transform: scale(1.2);
+    color: #b91c1c;
+}
+
+.list .fa-circle-check {
+    position: absolute;
+    right: 50px;
+    color: #2563eb;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.list .fa-circle-check:hover {
+    transform: scale(1.2);
+    color: #1d4ed8;
+}
+
+.list li.checked {
+    text-decoration: line-through;
+    color: #64748b;
+    background: #cbd5f5;
+}
+
+.list li.checked .fa-circle-check {
+    color: #94a3b8;
+}
+
+.in {
+    display: flex;
+}
+
+.in button {
+    width: 15%;
+    border-radius: 0 10px 0 0;
+    border: none;
+    font-size: 14px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    transition: 0.3s;
+}
+
+.in button:hover {
+    background: linear-gradient(135deg, #1e40af, #2563eb);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.edit-input {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    width: 70%;
+}
+
+@media (max-width: 600px) {
+    .head {
+        margin-top: 100px;
+        font-size: 22px;
+    }
+
+    .form {
+        width: 270px;
+    }
+
+    .in button {
+        width: 20%;
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1030px) {
+    .head {
+        margin-top: 100px;
+        font-size: 30px;
+    }
+
+    .form {
+        width: 500px;
+    }
+}
